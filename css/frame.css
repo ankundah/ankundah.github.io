@@ -98,20 +98,26 @@ hr {
 
 .menu {
   position: relative;
+  background-color: #333333;
   margin: 0 auto;
-  max-width: 900px;
+  height: 50px;
+
 }
 
 .menu-table {
-  padding: 10px 10px;
+  padding: 0px 10px;
   width: 100%;
   margin: 0;
 }
 
 .menu-highlight {
-  color: rgb(255, 255, 255) !important;
+  color: rgb(82, 72, 72) !important;
   opacity: 1 !important;
   font-weight: 700 !important;
+}
+
+.menu .logo a:hover {
+  cursor: pointer;
 }
 
 .logo {
@@ -140,13 +146,13 @@ hr {
   margin-right: 20px;
 }
 
-.menu-button img {
+.menu .menu-button img {
   width: 30px;
   height: 30px;
 }
 
 .menu-items a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(187, 177, 177, 0.8);
   text-decoration: none;
   font-weight: 400;
   font-size: 18px;
@@ -189,7 +195,7 @@ hr {
 .content ul a,
 .content ol a {
   text-decoration: none;
-  color: #005cbf;
+  color: #1b2c3d;
 }
 
 .content p a:hover,
@@ -211,7 +217,7 @@ hr {
   font-weight: 300;
   line-height: 1.5;
   overflow-x: auto;
-  background-color: #005cbf;
+  background-color: #1e2022;
   display: flex;
 }
 
@@ -1394,5 +1400,55 @@ ol.nested>li:before {
   .gallery>div.flex-column {
     flex: 1 0 100%;
     max-width: 100%;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  margin: 37px;
+  width: calc(350px * 3);
+  margin: 20px;
+  
+}
+
+.card {
+  box-shadow: 0 3px 10px 0 #aaa;
+  background-color: #4d4b4b;
+  color: white;
+  cursor: pointer;
+  height: 350px;
+  position: relative;
+  width: 350px;
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: wheat;
+}
+
+.card.visited {
+  box-shadow: 0 3px 10px 2px #444;
+}
+
+@media (max-width: 2000px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: calc(350px * 3);
+  }
+  .card {
+    margin: 0 auto 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: block;
+    width: 100vw;
+  }
+  .card {
+    margin: 0 auto 3rem;
   }
 }
