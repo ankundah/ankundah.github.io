@@ -2,33 +2,152 @@
  * Your custom CSS file
  *************************************************************************/
 
-.custom-dropdown {
-  width: 240px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  /* background-color:  no-repeat center center;
+  background-size: cover; */
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.custom-textbox {
-  width: 240px;
-}
-
-#dialog-1,
-#dialog-2,
-#dialog-3,
-#dialog-4,
-#share-dialog {
-  display: none;
-}
-
-#share-url {
+header img {
   width: 100%;
-  -webkit-touch-callout: default !important;
-  -webkit-user-select: text !important;
-  -khtml-user-select: text !important;
-  -moz-user-select: text !important;
-  -ms-user-select: text !important;
-  user-select: text !important;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure the image is behind the content */
 }
 
-#share-url-copy-prompt {
-  display: none;
-  color: #007bff;
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-right: 20px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgb(113, 104, 104);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.header-content {
+  max-width: 600px;
+  margin-top: 60px; /* Adjust this value to position the header content vertically */
+}
+
+
+button {
+  background-color: #310549;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #180420;
+}
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+section p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #666;
+  font-size: large;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: #aef393;
+  color: white;
+  margin: 10px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.skill:hover {
+  background-color: #5beb37;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.portfolio-item {
+  flex: 1 1 300px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.portfolio-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.portfolio-item p {
+  color: #666;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
