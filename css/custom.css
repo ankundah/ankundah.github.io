@@ -1,6 +1,6 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Edu AU VIC WA NT Dots", cursive;
   margin: 0;
   padding: 0;
 }
@@ -44,10 +44,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: rgb(113, 104, 104);
+  color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: larger;
+}
+
+nav ul li a:hover{
+  color: #70deed;
 }
 
 .header-content {
@@ -57,6 +61,7 @@ nav ul li a {
 
 
 button {
+  font-family: "Edu AU VIC WA NT Dots", cursive;
   background-color: #310549;
   border: none;
   color: white;
@@ -71,7 +76,7 @@ button:hover {
 section {
   padding: 60px 20px;
   text-align: center;
-  background-color: white;
+  background-color: rgb(214, 241, 241);
   margin: 20px 0;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -98,7 +103,7 @@ section p {
 }
 
 .skill {
-  background-color: #aef393;
+  background-color: #310549;
   color: white;
   margin: 10px;
   padding: 15px 25px;
@@ -108,7 +113,7 @@ section p {
 }
 
 .skill:hover {
-  background-color: #5beb37;
+  background-color: #683783;
 }
 
 .portfolio-container {
@@ -119,7 +124,7 @@ section p {
 }
 
 .portfolio-item {
-  flex: 1 1 300px;
+  flex: 1 1 1 300px;
   margin: 10px;
   background-color: #fff;
   border-radius: 8px;
@@ -137,6 +142,9 @@ section p {
 .portfolio-item p {
   color: #666;
 }
+.portfolio-item a {
+  text-decoration: none;
+}
 
 .portfolio-item:hover {
   transform: translateY(-10px);
@@ -147,4 +155,24 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+.highlight {
+  font-weight: bold;
+  color: #70deed;
+}
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #262524;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 70px;
+}
+
+.back-button:hover {
+  background-color: #615d5d;
 }

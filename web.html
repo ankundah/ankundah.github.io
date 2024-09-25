@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Web Development</title>
+  <link rel="icon" type="image/jpg" href="https://iili.io/dL18o8J.jpg">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+ </head>
+    <style>
+    body {
+        font-family: "Edu AU VIC WA NT Dots", cursive;
+        background-color: #99d5db;
+        color: #ffffff;
+    }
+    .card {
+        margin-top: 70px;
+        margin-left: 30px;
+        position: relative;
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+    .card img {
+        width: 70%;
+        height: auto;
+        border-radius: 10px;
+        margin: 10px;
+        transition: transform 0.3s ease; 
+    }
+    .card img:hover {
+        transform: scale(1.05);
+    }
+    .overlay-card {
+        position: absolute;
+        bottom: -10px;
+        left: 500px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        width: calc(55% - 40px);
+    }
+    .overlay-card .card-title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .overlay-card .card-link {
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .card-link:hover{
+        color: #70deed;
+    }
+    nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  background-color: beige;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* margin-right: 20px; */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+}
+    nav ul li a{
+        color: black;
+    }
+    nav ul li a:hover{
+        color: rgba(34, 131, 148, 0.803);
+    }
+    .fa-arrow-right{
+        font-size: 1rem;
+        padding: 10px;
+
+    }
+    h1{
+        margin-top: 80px;
+    }
+    footer{
+        background-color: #b3eff5;
+        color: black;
+    }
+        </style>
+<body>
+    <div> 
+        <nav>
+            <ul>
+                <li><a href="index.html">About me</a></li>
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="https://github.com/ankundah">Github</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>    
+    </div>
+    <center><h1>Web Projects</h1>
+    <h2>A few of my web projects</h2></center>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="img/Todo.png" alt="Todo app screenshot">
+                        <div class="overlay-card">
+                            <div class="card-title">Todo Web Application</div>
+                            <a href="details.html?project=Todo" class="card-link project-link">View Project 
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="img/Recipeapp.png" alt="Recipe Landing Page">
+                        <div class="overlay-card">
+                            <div class="card-title">Recipe Web Application</div>
+                            <a href="details.html?project=Recipe" class="card-link project-link">View Project
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; <span id="year"></span> Thia.</p>
+        </footer>
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
