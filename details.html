@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
 
 
@@ -101,14 +102,27 @@ footer {
 
 </style>
 <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">About me</a></li>
-                <li><a href="index.html">Portfolio</a></li>
-                <li><a href="https://github.com/ankundah">Github</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>  
+    <nav class="navbar navbar-expand-lg navbar-light bg-beige">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/ankundah">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </nav> 
         <div>
             <button class="back-button" onclick="history.back()">Back</button>
         </div>  
@@ -138,8 +152,6 @@ footer {
                 "Dynamic Updates: Use of JavaScript to handle task completion without reloading the page. AJAX requests are used to send completion data to the server, and the task list is updated dynamically to reflect changes immediately. Completed tasks are visually distinguished and the Complete button is removed to indicate the change." ,
                 "Server-Side Integration:Integration with a Django backend to handle data storage and management. Tasks are fetched, updated, and removed using Django views and URL routes, ensuring seamless interaction between the frontend and backend."],
                 GitHub: "https://github.com/ankundah/ToDo",
-
-
             },
             Recipe: {
                 title: "Recipe Web Application",
@@ -201,13 +213,14 @@ footer {
             `;
             let slideIndex = 0;
             const slidesElements = document.querySelectorAll('.slides');
+            let timeout;
 
             function showSlides() {
                 slidesElements.forEach(slide => slide.style.display = 'none');
                 slideIndex++;
                 if (slideIndex > slidesElements.length) { slideIndex = 1 }
                 slidesElements[slideIndex - 1].style.display = 'block';
-                timeout = setTimeout(showSlides, 2000); 
+                timeout = setTimeout(showSlides, 4000); 
             }
 
             function changeSlide(n) {
@@ -217,10 +230,8 @@ footer {
                 if (slideIndex < 1) { slideIndex = slidesElements.length }
                 slidesElements.forEach(slide => slide.style.display = 'none');
                 slidesElements[slideIndex - 1].style.display = 'block';
-                timeout = setTimeout(showSlides, 2000);
+                timeout = setTimeout(showSlides, 4000);
             }
-
-            let timeout = setTimeout(showSlides, 2000);
             showSlides();
         } else {
             document.getElementById('project-details').innerHTML = "<p>Oops I haven't done that one yet.</p>";
