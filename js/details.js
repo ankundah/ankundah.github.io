@@ -76,28 +76,19 @@ if (projectId && projects[projectId]) {
       <center>  <a href="${project.GitHub}" target="_blank">Visit GitHub Repo  <i class="fa fa-external-link" aria-hidden="true"></i></a></center>
     `;
     let slideIndex = 0;
-    const slidesElements = document.querySelectorAll('.slides');
-    let timeout;
+    showSlides();
 
     function showSlides() {
-        console.log('Showing slide index:', slideIndex); // Debug log
-        slidesElements.forEach(slide => slide.style.display = 'none');
-        slideIndex++;
-        if (slideIndex > slidesElements.length) { slideIndex = 1 }
-        slidesElements[slideIndex - 1].style.display = 'block';
-        timeout = setTimeout(showSlides, 4000);
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-
-    function changeSlide(n) {
-        clearTimeout(timeout);
-        slideIndex += n;
-        if (slideIndex > slidesElements.length) { slideIndex = 1 }
-        if (slideIndex < 1) { slideIndex = slidesElements.length }
-        slidesElements.forEach(slide => slide.style.display = 'none');
-        slidesElements[slideIndex - 1].style.display = 'block';
-        timeout = setTimeout(showSlides, 4000);
-    }
-    showSlides();
-} else {
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000);
+}}
+ else {
     document.getElementById('project-details').innerHTML = "<p>Oops I haven't done that one yet.</p>";
 }
