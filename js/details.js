@@ -41,16 +41,16 @@ const projects = {
     }
 };
 
-// Function to get query parameters
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
 
-// Get the project ID from the URL
 const projectId = getQueryParam('project');
 
-// Load project details
+let slideIndex = 0; 
+
+
 if (projectId && projects[projectId]) {
     const project = projects[projectId];
     const projectDetailsDiv = document.getElementById('project-details');
@@ -75,20 +75,23 @@ if (projectId && projects[projectId]) {
         <ul>${featuresList}</ul>
       <center>  <a href="${project.GitHub}" target="_blank">Visit GitHub Repo  <i class="fa fa-external-link" aria-hidden="true"></i></a></center>
     `;
-    let slideIndex = 0;
+
     showSlides();
 
     function showSlides() {
     let i;
     let slides = document.getElementsByClassName("slides");
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].style.display = "none"; 
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000);
-}}
+    slideIndex++; 
+    if (slideIndex > slides.length) {
+        slideIndex = 1; 
+    }
+    slides[slideIndex - 1].style.display = "block"; 
+    setTimeout(showSlides, 2000); 
+}
+}
  else {
     document.getElementById('project-details').innerHTML = "<p>Oops I haven't done that one yet.</p>";
 }
