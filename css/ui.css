@@ -105,7 +105,7 @@ opacity: 0;
 .img-container {
     position: relative;
     width: 300px; 
-    height: 150px; 
+    height: 200px; 
     margin: 25px; 
   }
   .img-container img {
@@ -123,19 +123,19 @@ opacity: 0;
   }
   
   .img-container:hover img:nth-child(2) {
-    transform: translateX(50px);
+    transform: translateX(80px);
   }
   
   .img-container:hover img:nth-child(3) {
-    transform: translateX(100px);
-  }
-  
-  .img-container:hover img:nth-child(4) {
     transform: translateX(150px);
   }
   
-  .img-container:hover img:nth-child(5) {
+  .img-container:hover img:nth-child(4) {
     transform: translateX(200px);
+  }
+  
+  .img-container:hover img:nth-child(5) {
+    transform: translateX(250px);
   }
   .img-logo:hover img:nth-child(1){
     transform: translateX(0);
