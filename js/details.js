@@ -31,6 +31,7 @@ const projects = {
             "img/Create.png",
             "img/Fav.png",
             "img/results.png",
+            "img/api.png",
             "img/Edit.png"],
         features: ["Create Recipes: Users can create their own recipes by inputting ingredients, instructions, and other details.",
         "Save Recipes: Save your favorite recipes for easy access later.",
@@ -89,7 +90,7 @@ if (projectId && projects[projectId]) {
         slideIndex = 1; 
     }
     slides[slideIndex - 1].style.display = "block"; 
-    setTimeout(showSlides, 2000); 
+    setTimeout(showSlides, 4000); 
 }
 }
  else {

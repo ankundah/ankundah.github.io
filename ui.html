@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="https://iili.io/dL18o8J.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/details.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <title>UI/UX Design</title>
+    <style>
+    body{
+        font-family: "Edu AU VIC WA NT Dots", cursive;
+        background: linear-gradient(90deg, #9ff4b0, #035917);
+    }
+    .section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center;
+    }
+    .img-container {
+      position: relative;
+      width: 300px; 
+      height: 350px; 
+      margin: 50px; 
+    }
+    .img-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+    }
+    
+    .img-container:hover img:nth-child(1) {
+      transform: translateX(0);
+    }
+    
+    .img-container:hover img:nth-child(2) {
+      transform: translateX(250px);
+    }
+    
+    .img-container:hover img:nth-child(3) {
+      transform: translateX(500px);
+    }
+    
+    .img-container:hover img:nth-child(4) {
+      transform: translateX(700px);
+    }
+    
+    .img-container:hover img:nth-child(5) {
+      transform: translateX(900px);
+    }
+    .img-container:hover img:nth-child(6) {
+      display: none;
+    }
+    .img-logo{
+      position: relative;
+      width: 400px; 
+      height: 200px; 
+      margin: 50px; 
+    }
+    .img-logo img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+    }
+    .img-logo:hover img:nth-child(1){
+        transform: translateX(0);
+    }
+    .img-logo:hover img:nth-child(2){
+        transform: translateX(400px);
+    }
+    .img-logo:hover img:nth-child(3){
+        display: none;
+    }
+    h2{
+        color: white;
+     }
+    #typed {
+      background: linear-gradient(90deg, #d69ff4, #de09de);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline;
+    }
+    .nav-link:hover{
+        color: #035917;
+    }
+    .text {
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+    width: auto; /* Allow text width to adjust */
+    text-align: center;
+    transition: opacity 0.5s ease; 
+}
+
+    .img-logo:hover + .text {
+    opacity: 0; 
+}
+.img-container:hover + .text {
+    opacity: 0; 
+}
+@media (min-width: 576px) {
+  .section {
+    flex-direction: row; /* Align items in a row for larger screens */
+  }
+  .text {
+    margin-left: 20px; /* Add space between images and text */
+  }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-beige">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/ankundah">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div>
+        <button class="back-button" onclick="history.back()">Back</button>
+    </div>
+    <center>
+        <h2>
+            I use my skills in figma to create <span id="typed"><!-- content will be typed here --></span>
+        </h2>
+    </center>
+        <div class="section">
+            <div class="img-container">
+                <img src="img/poster1.png" alt="Image 3">
+                <img src="img/poster2.jpg" alt="Image 3">
+                <img src="img/poster3.jpg" alt="Image 3">
+                <img src="img/poster4.jpg" alt="Image 3">
+                <img src="img/poster1.png" alt="Image 3">
+                <img src="img/posters.png" alt="Image 3">
+            </div>
+                <p class="text">These posters showcase my ability to create eye-catching and informative designs for various occasions.</p>
+        </div>
+
+        <div class="section">
+            <div class="img-container"> 
+                <img src="img/web1.png" alt="Image 3">
+                <img src="img/web2.png" alt="Image 3">
+                <img src="img/web3.png" alt="Image 3">
+                <img src="img/web4.png" alt="Image 3">
+                <img src="img/web5.png" alt="Image 3" >
+                <img src="img/web.png" alt="Image 3" >
+            </div>
+            <p class="text">My web designs emphasize user-friendly interfaces and modern aesthetics to enhance user experience.</p>
+        </div>
+        <div>
+            <div class="section">
+                <div class="img-container"> 
+                    <img src="img/app1.png" alt="Image 3" >
+                    <img src="img/app2.png" alt="Image 3" >
+                    <img src="img/app3.png" alt="Image 3" >
+                    <img src="img/app4.png" alt="Image 3" >
+                    <img src="img/app5.png" alt="Image 3" >
+                    <img src="img/app.png" alt="Image 3" >
+                </div>
+                <p class="text">These app designs demonstrate my proficiency in creating intuitive and engaging user interfaces for mobile applications.</p>
+        </div>
+        <div class="section">
+            <div class="img-logo">
+                <img src="img/logo1.png" alt="Image 3" >
+                <img src="img/logo2.png" alt="Image 3" >
+                <img src="img/logos.png" alt="Image 3" >
+            </div>
+                <p class="text">My logo designs reflect my ability to capture brand identity and create memorable visual symbols for businesses and projects.</p> 
+        </div>
+        
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+      const typed = new Typed('#typed', {
+        strings: ['Posters', 'Wireframes', 'Prototypes', 'Logos', 'Website Designs', 'App Designs'],
+        typeSpeed: 80,
+        startDelay: 100, // add a small delay before starting
+        backSpeed: 40, // speed at which the text is erased
+        backDelay: 2000, // time before backspacing
+        loop: true // loop the strings
+      });
+    });    
+    </script>
+</body>
+</html>
