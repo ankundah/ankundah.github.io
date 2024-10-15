@@ -16,6 +16,27 @@ const projects = {
         "Server-Side Integration:Integration with a Django backend to handle data storage and management. Tasks are fetched, updated, and removed using Django views and URL routes, ensuring seamless interaction between the frontend and backend."],
         GitHub: "https://github.com/ankundah/ToDo",
     },
+    Harmoni: {
+        title: "Entertainment Service Matching Platform",
+        description: "This is a web application designed to connect users with various entertainment service providers. Users can easily search for services, make bookings, and handle payments seamlessly. The platform features user-friendly dashboards for both clients and service providers, allowing them to manage and track their bookings effectively. This was a collaborative project with 3 other programmers.",
+        techstack: ["Backend: Python, Django",
+            "Database: Django ORM ",
+            "Frontend: HTML, CSS, JavaScript",
+            "Recommendation Algorithm: Python-based algorithm for personalized service recommendations"],
+        images: [
+            "img/harm1.png",
+            "img/harm2.png",
+            "img/harm3.jpg",
+            "img/harm4.png",
+            "img/harm5.png",
+        ],
+        features: ["Service Search: Users can search for various entertainment services based on categories, location, and availability.",
+        "Booking System: Users can book services directly through the platform, with a streamlined payment process..",
+        "Client and Service Provider Dashboard: A personalized dashboard for clients to view scheduled, pending, and completed bookings as well as a dedicated dashboard for service providers to manage their offerings and track bookings.",
+        "Notifications: Automated notifications sent to users with booking details and reminders.",
+        "Dynamic Content: Interactive elements powered by JavaScript for improved user experience, such as tabs for easy navigation."],
+        GitHub: "https://github.com/allanalmax/harmoni",
+    },
     Recipe: {
         title: "Recipe Web Application",
         description: "Website with all your recipe needs, you can search for specific recipes by ingredients and create your own. This is your very own recipe book if you will.",
@@ -96,3 +117,4 @@ if (projectId && projects[projectId]) {
  else {
     document.getElementById('project-details').innerHTML = "<p>Oops I haven't done that one yet.</p>";
 }
+
