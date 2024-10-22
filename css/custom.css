@@ -174,3 +174,14 @@ footer {
 .back-button:hover {
   background-color: #615d5d;
 }
+
+@media (max-width: 600px) {
+  header img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure the image is behind the content */
+  }
+}
