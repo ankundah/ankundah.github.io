@@ -80,7 +80,7 @@ if (projectId && projects[projectId]) {
     const techstackList = project.techstack.map(tech => `<li>${tech}</li>`).join('');
     const slides = project.images.map(image => `
         <div class="slides">
-            <img src="${image}" alt="${project.title}">
+            <img src="${image}" loading="lazy" alt="${project.title}">
         </div>`).join('');
 
     projectDetailsDiv.innerHTML = `
