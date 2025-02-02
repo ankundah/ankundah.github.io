@@ -11,10 +11,14 @@
 </head>
 
 <button class="back-button" onclick="history.back()">Back</button>
-<h1>Schedule a Meeting with me</h1>
+  <div class="contact-message">
+    <h2>Oops! My Contact Form is Taking a Break</h2>
+    <p>But don’t worry—you can still reach me via <a href="mailto:cynthiaankunda@gmail.com">email</a> or <a href="https://ug.linkedin.com/in/cynthia-ankunda-b80855258" target="_blank">LinkedIn</a> . I'll get back to you as soon as possible!</p>
+</div>
+<!-- <h1>Schedule a Meeting with me</h1>
 
-<!-- <div class="calendly-inline-widget" data-url="https://calendly.com/thiak/30minute_meeting?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div> -->
- <iframe
+ <div class="calendly-inline-widget" data-url="https://calendly.com/thiak/30minute_meeting?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div> -->
+<!-- <iframe
   data-url="https://calendly.com/thiak?hide_landing_page_details=1"
   class="calendly-inline-widget"
   min-width="320"
@@ -22,7 +26,7 @@
   src="https://assets.calendly.com/assets/external/widget.js"
   frameborder="0"
 >
-</iframe>
+</iframe> -->
 
 <footer>
     <p>&copy; 2024 Thiä</p>
@@ -49,6 +53,33 @@ h1 {
 .back-button:hover {
             background-color: #615d5d;
         }
+.contact-message {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-message h2 {
+    color: #333;
+}
+
+.contact-message p {
+    color: #555;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+}
 footer {
   background-color: #333;
   color: white;
