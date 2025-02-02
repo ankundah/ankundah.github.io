@@ -1,6 +1,6 @@
 
 body {
-  font-family: "Edu AU VIC WA NT Dots", cursive;
+  font-family: "Playfair Display", serif;
   margin: 0;
   padding: 0;
 }
@@ -60,7 +60,7 @@ nav ul li a:hover{
 }
 
 button {
-  font-family: "Edu AU VIC WA NT Dots", cursive;
+  font-family: "Playfair Display", serif;
   background-color: #310549;
   border: none;
   color: white;
