@@ -136,7 +136,7 @@
     }
 
     /* Audio Permission Button */
-    #audioPermission {
+    /* #audioPermission {
       background: #4CAF50;
       color: white;
       border: none;
@@ -147,7 +147,7 @@
       display: none;
       font-family: 'Chewy', cursive;
       font-size: clamp(0.9rem, 3vw, 1.1rem);
-    }
+    } */
 
     /* Floating Elements */
     @keyframes floatUp {
@@ -203,7 +203,7 @@
     @media (max-width: 600px) {
       .memory {
         padding: 10px;
-        min-height: 300px;
+        min-height: 500px;
       }
       
       .slide {
@@ -258,8 +258,8 @@
   <p>Thank you for being the amazing person you are. I can't wait to celebrate many more birthdays with you! 🎂❤️</p>
   <p>Love, Thia😚</p>
 
-  <button id="surpriseBtn">Click for a surprise!</button>
-  <button id="audioPermission">Enable Audio for Full Experience</button>
+  <button id="surpriseBtn">Click Me!</button>
+  <!-- <button id="audioPermission">Enable Audio for Full Experience</button> -->
 
   <audio id="birthdayAudio" preload="auto">
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
@@ -272,37 +272,37 @@
   <script>
     // DOM Elements
     const btn = document.getElementById('surpriseBtn');
-    const audioBtn = document.getElementById('audioPermission');
-    const audio = document.getElementById('birthdayAudio');
+    // const audioBtn = document.getElementById('audioPermission');
+    // const audio = document.getElementById('birthdayAudio');
     const slides = document.querySelectorAll('.slide');
     const balloons = ['🎈', '🎈', '🎈', '🎉', '🎊', '💖', '🎀', '🌸'];
     const hearts = ['❤️', '🧡', '💛', '💚', '💙', '💜', '🤎', '🖤', '🤍'];
     
     // Audio Setup
-    let audioAllowed = false;
+    // let audioAllowed = false;
     
-    const tryEnableAudio = async () => {
-      try {
-        await audio.play();
-        audio.pause();
-        audio.currentTime = 0;
-        audioAllowed = true;
-      } catch (e) {
-        audioBtn.style.display = 'block';
-      }
-    };
+    // const tryEnableAudio = async () => {
+    //   try {
+    //     await audio.play();
+    //     audio.pause();
+    //     audio.currentTime = 0;
+    //     audioAllowed = true;
+    //   } catch (e) {
+    //     audioBtn.style.display = 'block';
+    //   }
+    // };
     
-    audioBtn.addEventListener('click', async () => {
-      try {
-        await audio.play();
-        audio.pause();
-        audio.currentTime = 0;
-        audioAllowed = true;
-        audioBtn.style.display = 'none';
-      } catch (e) {
-        alert("Couldn't enable audio. Try clicking the button again later!");
-      }
-    });
+    // audioBtn.addEventListener('click', async () => {
+    //   try {
+    //     await audio.play();
+    //     audio.pause();
+    //     audio.currentTime = 0;
+    //     audioAllowed = true;
+    //     audioBtn.style.display = 'none';
+    //   } catch (e) {
+    //     alert("Couldn't enable audio. Try clicking the button again later!");
+    //   }
+    // });
     
     // Slideshow
     let currentSlide = 0;
@@ -335,14 +335,14 @@
       btn.textContent = "Surprise Incoming!";
       
       // Play audio if allowed
-      if (audioAllowed) {
-        try {
-          audio.currentTime = 0;
-          await audio.play();
-        } catch (e) {
-          console.log("Audio playback failed:", e);
-        }
-      }
+      // if (audioAllowed) {
+      //   try {
+      //     audio.currentTime = 0;
+      //     await audio.play();
+      //   } catch (e) {
+      //     console.log("Audio playback failed:", e);
+      //   }
+      // }
       
       // Confetti
       confetti({
@@ -427,7 +427,7 @@
     
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
-      tryEnableAudio();
+      // tryEnableAudio();
       startSlideshow();
       
       // Play first video if it exists
